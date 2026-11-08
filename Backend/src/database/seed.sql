@@ -54,3 +54,40 @@ INSERT INTO courses (
 ('Desarrollo de Aplicaciones Móviles', 'Fundamentos y desarrollo de aplicaciones para dispositivos móviles.', 3, 7, TRUE),
 
 ('Inteligencia Artificial', 'Fundamentos de inteligencia artificial, aprendizaje automático y algoritmos inteligentes.', 4, 8, TRUE);
+
+
+INSERT INTO teachers (
+    id,
+    name,
+    phone,
+    email,
+    status
+) VALUES
+  (1, 'Carlos Alberto Rodríguez', '3101234567', 'carlos.rodriguez@uceva.edu.co', true),
+  (2, 'Ana María Gómez', '3119876543', 'ana.gomez@uceva.edu.co', true),
+  (3, 'Javier Eduardo López', '3124567890', 'javier.lopez@uceva.edu.co', true),
+  (4, 'Laura Sofia Martínez', '3157654321', 'laura.martinez@uceva.edu.co', true),
+  (5, 'Fernando Jose Ramírez', '3182345678', 'fernando.ramirez@uceva.edu.co', true),
+  (6, 'Diana Marcela Torres', '3168765432', 'diana.torres@uceva.edu.co', true),
+  (7, 'Ricardo Andres Morales', '3173456789', 'ricardo.morales@uceva.edu.co', true),
+  (8, 'Patricia Elena Castro', '3199876543', 'patricia.castro@uceva.edu.co', true),
+  (9, 'Gustavo Adolfo Perez', '3001234567', 'gustavo.perez@uceva.edu.co', true),
+  (10, 'Claudia Jimena Vargas', '3019876543', 'claudia.vargas@uceva.edu.co', true);
+
+
+INSERT INTO classroom (
+    id,
+    code,
+    capacity,
+    status
+    ) VALUES
+  (1, 'A-101', 35, true),
+  (2, 'A-102', 40, true),
+  (3, 'B-201', 30, true),
+  (4, 'B-202', 25, true),
+  (5, 'C-301', 45, true),
+  (6, 'LAB-1', 20, true),
+  (7, 'LAB-2', 20, true),
+  (8, 'AUD-1', 100, true),
+  (9, 'D-104', 35, true),
+  (10, 'D-105', 30, true);
