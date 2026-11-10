@@ -6,6 +6,6 @@ export interface Teacher {
   status: boolean;
 }
 
-export interface CreateTeacherRequest extends Teacher {}
+export type CreateTeacherRequest = Omit<Teacher, "id">;
 
 export type UpdateTeacherRequest = Omit<Teacher, "id">;

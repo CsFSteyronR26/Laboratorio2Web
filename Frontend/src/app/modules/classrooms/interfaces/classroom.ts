@@ -5,6 +5,6 @@ export interface Classroom {
   status: boolean;
 }
 
-export interface CreateClassroomRequest extends Classroom {}
+export type CreateClassroomRequest = Omit<Classroom, "id">;
 
 export type UpdateClassroomRequest = Omit<Classroom, "id">;

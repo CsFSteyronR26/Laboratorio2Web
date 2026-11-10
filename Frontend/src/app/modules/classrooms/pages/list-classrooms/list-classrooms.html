@@ -1,1 +1,6 @@
-<p>list-classrooms works!</p>
+<div class="d-flex justify-content-end" >
+    <app-button [config]="createButtonConfig" (onClick)="createStudent()" />
+</div>
+<div class="mt-3">
+    <app-table-students [students]="students" (onClickActions)="tableEvents($event)" />
+</div>

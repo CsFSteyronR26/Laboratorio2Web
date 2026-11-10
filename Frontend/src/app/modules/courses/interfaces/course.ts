@@ -7,6 +7,6 @@ export interface Course {
   status: boolean;
 }
 
-export interface CreateCourseRequest extends Course {}
+export type CreateCourseRequest = Omit<Course, "id">;
 
 export type UpdateCourseRequest = Omit<Course, "id">;

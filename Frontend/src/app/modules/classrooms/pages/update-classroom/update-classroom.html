@@ -1,1 +1,134 @@
-<p>update-classroom works!</p>
+<app-back />
+
+<div class="container-fluid py-4">
+
+  <!-- Encabezado -->
+  <div class="mb-4">
+    <h3 class="fw-bold mb-1">Editar aula</h3>
+    <p class="text-muted mb-0">
+      Modifica la información de la aula seleccionada.
+    </p>
+  </div>
+
+  <!-- Formulario -->
+  <div class="card border">
+    <div class="card-header bg-white py-3">
+      <h5 class="mb-0">
+        <i class="bi bi-person-gear me-2"></i>
+        Información de la aula
+      </h5>
+    </div>
+
+    <div class="card-body">
+
+      <form [formGroup]="classroomForm" (ngSubmit)="updateClassroom()">
+
+        <div class="row g-3">
+
+          <!-- Identificación -->
+          <div class="col-md-6">
+            <label for="id" class="form-label">
+              Número de identificación
+            </label>
+
+            <input
+              type="text"
+              id="id"
+              class="form-control"
+              formControlName="id"
+              readonly
+            >
+
+            <small class="text-muted">
+              La identificación no puede modificarse.
+            </small>
+          </div>
+
+          <!-- Código -->
+          <div class="col-md-6">
+            <label for="code" class="form-label">
+              Código *
+            </label>
+
+            <input
+              type="text"
+              id="code"
+              class="form-control"
+              formControlName="code"
+              placeholder="Ingrese el código"
+            >
+
+            @if (classroomForm.get('code')?.touched && classroomForm.get('code')?.invalid) {
+              <small class="text-danger">
+                El código es obligatorio.
+              </small>
+            }
+          </div>
+
+          <!-- Capacidad -->
+          <div class="col-md-6">
+            <label for="capacity" class="form-label">
+              Capacidad *
+            </label>
+
+            <input
+              type="number"
+              id="capacity"
+              class="form-control"
+              formControlName="capacity"
+              placeholder="Ingrese la capacidad"
+            >
+
+            @if (classroomForm.get('capacity')?.touched && classroomForm.get('capacity')?.invalid) {
+              <small class="text-danger">
+                La capacidad es obligatoria.
+              </small>
+            }
+          </div>
+          <!-- Estado -->
+          <div class="col-12">
+            <div class="form-check form-switch mt-2">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="status"
+                formControlName="status"
+              >
+
+              <label class="form-check-label" for="status">
+                Estudiante activo
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- Acciones -->
+        <div class="d-flex justify-content-end gap-2">
+
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            (click)="goToList()"
+          >
+            Cancelar
+          </button>
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="studentForm.invalid"
+          >
+            <i class="bi bi-save me-2"></i>
+            Actualizar estudiante
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>
