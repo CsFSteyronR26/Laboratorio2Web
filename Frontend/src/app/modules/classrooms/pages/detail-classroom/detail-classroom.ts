@@ -1,4 +1,4 @@
-import { CommonModule, DatePipe } from '@angular/common';
+import { CommonModule} from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Back } from '../../../shared/components/back/back';
@@ -8,7 +8,7 @@ import { ClassroomService } from '../../services/classroom.service';
 
 @Component({
   selector: 'app-detail-classroom',
-  imports: [Back, DatePipe, CommonModule],
+  imports: [Back, CommonModule],
   templateUrl: './detail-classroom.html',
 })
 export class DetailClassroom {
